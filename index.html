@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide — a number puzzle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="wrap">
+    <header class="frame">
+      <h1 class="frame__title">Slide</h1>
+      <p class="frame__subtitle">arrange the tiles, 1 through 15</p>
+    </header>
+
+    <div class="stats" role="status" aria-live="polite">
+      <div class="stats__item">
+        <span class="stats__label">moves</span>
+        <span class="stats__value" id="moves">0</span>
+      </div>
+      <div class="stats__divider" aria-hidden="true"></div>
+      <div class="stats__item">
+        <span class="stats__label">time</span>
+        <span class="stats__value" id="time">0:00</span>
+      </div>
+      <div class="stats__divider" aria-hidden="true"></div>
+      <div class="stats__item">
+        <span class="stats__label">best</span>
+        <span class="stats__value" id="best">—</span>
+      </div>
+    </div>
+
+    <section class="board-holder">
+      <div class="board" id="board" aria-label="Puzzle board"></div>
+      <div class="win" id="win" hidden>
+        <p class="win__text">solved</p>
+        <p class="win__meta" id="winMeta"></p>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button class="btn btn--primary" id="shuffleBtn">New game</button>
+      <div class="controls__size" role="group" aria-label="Grid size">
+        <button class="btn btn--ghost" data-size="3">3×3</button>
+        <button class="btn btn--ghost is-active" data-size="4">4×4</button>
+        <button class="btn btn--ghost" data-size="5">5×5</button>
+      </div>
+    </div>
+
+    <p class="hint">tap a tile next to the empty space, or use the arrow keys</p>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
